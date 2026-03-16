@@ -1,0 +1,40 @@
+type: vertical-stack
+cards:
+  - type: picture-entity
+    entity: binary_sensor.shelly_1_mini_gen4_input
+    name: Heating Valve
+    show_state: false
+    show_name: false
+    state_image:
+      "on": /local/belimo_v8_open.svg
+      "off": /local/belimo_v8_closed.svg
+      unavailable: /local/belimo_v8_open.svg
+      unknown: /local/belimo_v8_open.svg
+    card_mod:
+      style:
+        .: |
+          ha-card {
+            background: rgba(200, 200, 200, 0.3);
+          }
+        hui-image $: |
+          img {
+            max-height: 400px !important;
+            object-fit: contain !important;
+          }
+  - type: entities
+    entities:
+      - entity: binary_sensor.shelly_1_mini_gen4_input
+        name: Valve Status
+        icon: mdi:valve
+      - type: attribute
+        entity: binary_sensor.shelly_1_mini_gen4_input
+        attribute: last_changed
+        name: Since
+        icon: mdi:clock-outline
+        format: relative
+  - type: history-graph
+    entities:
+      - entity: binary_sensor.shelly_1_mini_gen4_input
+        name: Heating history
+    hours_to_show: 24
+    show_names: false

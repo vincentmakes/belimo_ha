@@ -1,0 +1,17 @@
+type: vertical-stack
+cards:
+  - type: picture-entity
+    entity: binary_sensor.shelly_1_mini_gen4_input
+    show_state: false
+    show_name: false
+    state_image:
+      "on": /local/belimo_v8_open.svg
+      "off": /local/belimo_v8_closed.svg
+      unavailable: /local/belimo_v8_open.svg
+      unknown: /local/belimo_v8_open.svg
+  - type: history-graph
+    entities:
+      - entity: binary_sensor.shelly_1_mini_gen4_input
+        name: Heating
+    hours_to_show: 24
+    show_names: false

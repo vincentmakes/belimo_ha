@@ -1,0 +1,11 @@
+# Add this to your configuration.yaml
+# Replace the entity ID with your actual Shelly input entity
+# Check Settings → Devices → Shelly 1 Mini Gen4 for the correct entity ID
+
+template:
+  - binary_sensor:
+      - name: "Heating Valve"
+        unique_id: belimo_heating_valve
+        device_class: running
+        state: >
+          {{ is_state('binary_sensor.shelly_1_mini_gen4_input', 'on') }}
