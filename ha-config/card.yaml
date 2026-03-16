@@ -26,12 +26,7 @@ cards:
       - entity: binary_sensor.shelly_1_mini_gen4_input
         name: Valve Status
         icon: mdi:valve
-      - type: attribute
-        entity: binary_sensor.shelly_1_mini_gen4_input
-        attribute: last_changed
-        name: Since
-        icon: mdi:clock-outline
-        format: relative
+        secondary_info: last-changed
   - type: history-graph
     entities:
       - entity: binary_sensor.shelly_1_mini_gen4_input
