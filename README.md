@@ -2,11 +2,11 @@
 
 Monitor whether your heating valve is open or closed in [Home Assistant](https://www.home-assistant.io/) using a **Belimo SR230A-R** actuator, a **Belimo S1A** auxiliary switch add-on, and a **Shelly 1 Mini Gen4**.
 
-![Valve Card Preview](images/ha-card-preview.png)
+<img src="images/ha-card-preview.png" width="300">
 
 ## Overview
 
-The Belimo SR230A-R is a rotary actuator commonly used on ball valves in heating systems. It has no built-in position feedback — only a mechanical position indicator (the black handle). By adding the **Belimo S1A** auxiliary switch module, we get a dry contact that changes state based on valve position. A **Shelly 1 Mini Gen4** reads that contact and exposes it to Home Assistant as a binary sensor.
+The Belimo SR230A-R is a rotary actuator commonly used on ball valves in heating systems. It has no built-in position feedback — only a mechanical position indicator (the black handle). By adding the **Belimo S1A** auxiliary switch module, we get a dry contact that changes state based on valve position. A **Shelly 1 Mini Gen4** reads that contact and exposes it to Home Assistant as a binary sensor. The **Belimo S2A** is also an option in case the S1A is not available.
 
 The result: a `binary_sensor` in HA that tells you whether your heating valve is open or closed, with custom SVG illustrations of the actual actuator.
 
@@ -226,9 +226,16 @@ belimo-ha-valve-monitor/
 
 The SVG illustrations are hand-crafted vector graphics based on the actual Belimo SR230A-R-9 installation. They show:
 
-| Closed | Open |
-|--------|------|
-| ![Closed](svg/belimo_v8_closed.svg) | ![Open](svg/belimo_v8_open.svg) |
+<table>
+  <tr>
+    <td align="center"><strong>Closed</strong></td>
+    <td align="center"><strong>Open</strong></td>
+  </tr>
+  <tr>
+    <td><img src="svg/belimo_v8_closed.svg" width="200"></td>
+    <td><img src="svg/belimo_v8_open.svg" width="200"></td>
+  </tr>
+</table>
 
 - Handle horizontal (perpendicular to pipe) = **Closed** / Heating Off
 - Handle vertical (aligned with pipe) = **Open** / Heating On
