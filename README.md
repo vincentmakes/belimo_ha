@@ -2,7 +2,13 @@
 
 Monitor whether your heating valve is open or closed in [Home Assistant](https://www.home-assistant.io/) using a **Belimo SR230A-R** actuator, a **Belimo S1A** auxiliary switch add-on, and a **Shelly 1 Mini Gen4**.
 
-<img src="images/ha-card-preview.png" width="300">
+<img width="1375" height="598" src="https://github.com/user-attachments/assets/6c7e2cfb-70a2-4b0e-82d6-5b3ba1a838ea" />
+The lovelace Card created in this repo is then part of a bigger dashboard providing an overview of the whole heating sytem, driven by a Hoval Toptronic: https://github.com/vincentmakes/canbus_hoval  
+  
+  
+**The lovelace card by itself**  
+<img width="458" height="539" src="https://github.com/user-attachments/assets/158e1f56-64f6-4749-8ba7-f610f5ff92e4" width="200" />
+
 
 ## Overview
 
